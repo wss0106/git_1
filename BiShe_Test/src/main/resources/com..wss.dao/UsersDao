@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper>
+    <select id="queryByName" resultMap="com.wss.entity.Users">
+        select
+          id,name,pwd
+        from test.Users
+        where name = #{name}
+    </select>
+
+    <select id="queryAll" resultMap="com.wss.entity.Users">
+        select
+          id,name,pwd
+        from test.Users
+    </select>
+</mapper>
